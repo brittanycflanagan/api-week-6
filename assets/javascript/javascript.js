@@ -1,3 +1,8 @@
+//Add More Buttons
+//Format Page
+
+
+$( document ).ready(function() {
 //Dynamically Generate Buttons based on an array
 
 var buttons = ["The Office", "Game of Thrones", "Big Bang Theory"]
@@ -18,16 +23,19 @@ function renderButtons() {
   // Adds a User Input button
   $("#add-button").on("click", function(event) {
     event.preventDefault(); //makes buttons stick
-    var tvShow = $("#tv-input").val().trim(); //trim cuts out extra spaces
-    console.log(tvShow);
-    buttons.push(tvShow);
-    console.log(tvShow);
+    var newShow = $("#tv-input").val().trim(); //trim cuts out extra spaces
+    buttons.push(newShow);
     $("#buttons-appear-here").empty();
     renderButtons();
+    $("#tv-input").val("");
   });
 
 //Click event search buttton
-$("button").on("click", function() {
+// change to parameter format!
+
+$(document).on('click', '.show-buttons', function() {
+//$(".show-buttons").on("click", function() {
+   // event.preventDefault();
     $("#gifs-appear-here").empty(); //replace past gifs
 
     var tvShow = $(this).attr("data-name");
@@ -42,7 +50,7 @@ $("button").on("click", function() {
        
         .then(function(response) {
           
-          console.log(response);
+          
           var results = response.data;
             console.log(results);
           // Looping over every result item
@@ -65,9 +73,9 @@ $("button").on("click", function() {
         });
     });
 
- $(".gif").on("click", function() {
-      var state = $(this).attr("data-state");
-      
+    $(document).on("click", ".gif", function() {
+    console.log("clicked");  
+    var state = $(this).attr("data-state");
       if (state === "still") {
         $(this).attr("src", $(this).attr("data-animate"));
         $(this).attr("data-state", "animate");
@@ -77,6 +85,4 @@ $("button").on("click", function() {
       }
     });
 
-    
-
-    
+});
