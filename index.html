@@ -17,16 +17,30 @@
     
 </head>
 <body>
-    <div id="buttons-appear-here"></div>
-    <form id="tvshow-form">
-            <label for="tvshow-input">Add a TV Show</label>
-            <input type="text" id="tv-input"><br>
+    <div class="container">
+        <div class="row">
+            <div id="buttons-appear-here" class="col-lg-12"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9 col-sm-12"><div id="gifs-appear-here"></div></div>
+            <div class="col-lg-3 col-sm-12">
+               
+                <form id="tvshow-form">
+                    <label for="tvshow-input"><b>Add a TV Show:</b></label><br>
+                    <input type="text" id="tv-input"><br><br>
+                
+                        <!-- Button triggers new tv show to be added -->
+                    <input id="add-button" type="submit" value="Submit">
+                </form>
+                
+                
+            </div>
+            
+            
+        
     
-            <!-- Button triggers new tv show to be added -->
-            <input id="add-button" type="submit" value="Add TV Show">
-          </form>
-    <div id="gifs-appear-here"></div>
-
+</div>
+</div>
 
 <!--Linking Javascript -->
 <script type="text/javascript" src="assets/javascript/javascript.js"></script>

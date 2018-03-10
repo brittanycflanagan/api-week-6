@@ -1,0 +1,43 @@
+.show-buttons {
+    background-color: navy;
+    color: white;
+    padding: 12px;
+    margin: 10px;
+    border: 20px;
+    border-radius: 10px;
+    
+}
+
+body {
+    background-color: lightgray;
+}
+
+
+#tv-input {
+    width: 300px;
+}
+
+#add-button {
+    background-color: navy;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    border: 20px;
+    border-radius: 10px;
+}
+
+#gifs-appear-here {
+    margin-top:30px;
+
+    
+}
+
+.gifDiv {
+    float:left;
+    margin: 5px;
+}
+
+#form {
+    float: right;
+}
+
