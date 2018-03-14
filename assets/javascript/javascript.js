@@ -61,7 +61,7 @@ $(document).on('click', '.show-buttons', function() {
               var rating = results[i].rating;
               var p = $("<p>").text("Rating: " + rating);
               var tvImage = $("<img>");
-              gifDiv.attr("class", "gifDiv");
+              gifDiv.attr("class", "gifDiv"); 
               tvImage.attr("src", results[i].images.fixed_height_still.url);
               tvImage.attr("data-state", "still");
               tvImage.attr("data-still", results[i].images.fixed_height_still.url);
